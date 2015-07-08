@@ -5,7 +5,7 @@
 Delete a local branch `foobar` like this:
 
 ```bash
-git branch -D foobar
+$ git branch -D foobar
 ```
 
 Delete the remote branch  `foobar` like this (using git 1.7.0 and later):
@@ -98,7 +98,7 @@ $ git checkout -b branch-name
 $ git merge branch-name
 ```
 
-== Saving changes before working on differen branch
+== Saving changes before working on different branch
 
 ```bash
 $ git stash
@@ -126,6 +126,7 @@ $ touch .gitignore
 ```bash
 $ git add filename
 ```
+
 ```bash
 $ git add directory
 ```
