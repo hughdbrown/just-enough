@@ -49,3 +49,11 @@ $ mv foo bar # Rename foo to bar
 ```bash
 $ rsync --recursive --verbose --whole-file --progress . myname@192.168.1.2:/tmp/
 ```
+
+## Input/Output
+```bash 
+$ command > file # Redirect standard output from command into file
+$ command >> file # Append standard output from command to file 
+$ command < file # Redirect standard input from file
+$ command1 | command2 # Create a pipe that takes hte output of command1 and uses it as the input for command2
+```
