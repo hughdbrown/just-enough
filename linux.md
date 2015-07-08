@@ -5,14 +5,15 @@
 $ touch foo
 ```
 
-## Delete a file
+## Delete a file, directory 
 ```bash
 $ rm foo
+$ rmdir foo
 ```
 
 ## Write out contents of file to screen
 ```bash
-$ rm foo
+$ cat foo
 ```
 
 ## Copy a file
