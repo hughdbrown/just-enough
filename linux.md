@@ -66,3 +66,12 @@ $ command < file # Redirect standard input from file
 $ command1 | command2 # Create a pipe that takes the output 
 					  # of command1 and uses it as the input for command2
 ```
+
+## Pattern Matching 
+```bash
+$ grep 'keyword' file # Search a file for 'keyword'
+                      # Options: -i (ignore case); -v (display lines 
+                      # that don't match); -n (precede each matching 
+                      # line with the line number); -c (print only the 
+                      # total count of matched lines)
+```
