@@ -63,15 +63,14 @@ $ rsync --recursive --verbose --whole-file --progress . myname@192.168.1.2:/tmp/
 $ command > file # Redirect standard output from command into file
 $ command >> file # Append standard output from command to file 
 $ command < file # Redirect standard input from file
-$ command1 | command2 # Create a pipe that takes the output 
-					  # of command1 and uses it as the input for command2
+$ command1 | command2 # Create a pipe that takes the output of command1 and
+					  # uses it as the input for command2
 ```
 
 ## Pattern Matching 
 ```bash
 $ grep 'keyword' file # Search a file for 'keyword'
-                      # Options: -i (ignore case); -v (display lines 
-                      # that don't match); -n (precede each matching 
-                      # line with the line number); -c (print only the 
-                      # total count of matched lines)
+                      # Options: -i (ignore case); -v (display lines that don't match); 
+                      # -n (precede each matching line with the line number); 
+                      # -c (print only the total count of matched lines)
 ```
