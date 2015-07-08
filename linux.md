@@ -1,5 +1,10 @@
 # Just enough Linux to poke yourself in the eye
 
+## Command Help
+```bash
+$ man command # Read the online manual page for 'command'
+$ whatis command # Brief description of 'command'
+
 ## Moving Around Directories
 ```bash 
 $ cd # Move to home directory. 
