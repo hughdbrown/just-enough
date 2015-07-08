@@ -6,6 +6,8 @@ $ cd # Move to home directory.
 $ cd .. # Move up one directory
 $ cd ../foo # Move up one directory, then to foo within that
 $ cd ~/foo # Move too home directory, then to foo within home
+$ pwd # display the path of the current working directory
+$ ls # list files and directories in current directory
 ```
 
 ## Create an empty file
