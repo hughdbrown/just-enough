@@ -1,6 +1,6 @@
-= Just enough git to poke yourself in the eye
+# Just enough git to poke yourself in the eye
 
-== Delete branch
+## Delete branch
 
 Delete a local branch `foobar` like this:
 
@@ -14,7 +14,7 @@ Delete the remote branch  `foobar` like this (using git 1.7.0 and later):
 $ git push origin --delete foobar
 ```
 
-== Clone a repository
+## Clone a repository
 
 ```bash
 $ git clone url <destination>
@@ -25,7 +25,7 @@ url has three different formats
 2. git://HOST/PATH
 3. https://HOST/PATH
 
-== Push new branch to origin
+## Push new branch to origin
 
 Try sending it like this:
 
@@ -35,26 +35,26 @@ $ git push
 
 git will fail but give you the correct command in the error message.
 
-== Rebase local changes onto remote
+## Rebase local changes onto remote
 
 ```bash
 $ git fetch
 $ git rebase -p origin/master
 ```
 
-== Edit commit message
+## Edit commit message
 
 ```bash
 $ git commit --amend
 ```
 
-== Change diff output
+## Change diff output
 
 ```bash
 $ git config merge.conflictstyle diff3
 ```
 
-== Undo last commit
+## Undo last commit
 
 ```bash
 $ git reset --hard HEAD~1
@@ -68,60 +68,60 @@ $ git reset --soft HEAD~1
 $ git revert HEAD~1
 ```
 
-== Fix merge conflicts
+## Fix merge conflicts
 
 ```bash
 $ git mergetool
 ```
 
-== Find lost commit
+## Find lost commit
 
 ```bash
 $ git reflog
 ```
 
-== Squash merge
+## Squash merge
 
 ```bash
 $ git merge --squash branch-name
 ```
 
-== Making a branch
+## Making a branch
 
 ```bash
 $ git checkout -b branch-name
 ```
 
-== Merging a branch
+## Merging a branch
 
 ```bash
 $ git merge branch-name
 ```
 
-== Saving changes before working on different branch
+## Saving changes before working on different branch
 
 ```bash
 $ git stash
 ```
 
-== Finding where breaking code was added
+## Finding where breaking code was added
 
 ```bash
 $ git bisect
 ```
 
-== Squashing local commits
+## Squashing local commits
 
 ```bash
 $ git rebase -i HEAD~n```
 
-== Ignore files in directories
+## Ignore files in directories
 
 ```bash
 $ touch .gitignore
 ```
 
-== Add files/directories to git repo
+## Add files/directories to git repo
 
 ```bash
 $ git add filename
@@ -131,15 +131,15 @@ $ git add filename
 $ git add directory
 ```
 
-== Install git
+## Install git
 
-=== On ubuntu
+### On ubuntu
 
 ```bash
 $ sudo apt-get install git
 ```
 
-=== From source code
+### From source code
 
 ```bash
 $ wget https://github.com/git/git/archive/master.zip && \
@@ -147,7 +147,7 @@ $ wget https://github.com/git/git/archive/master.zip && \
     ./configure && make && sudo make install
 ```
 
-== Rebase changes on top of remote
+## Rebase changes on top of remote
 
 When I work with a fork of a github repo, I occasionally want to rebase my code on top
 of the latest code. Here is what I do:
