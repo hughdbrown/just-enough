@@ -1,0 +1,10 @@
+# Just enough postgresql to poke yourself in the eye
+
+## Connect to a database using psql
+> \connect (or \c) database_name
+
+## List all database using psql
+> \list or \l: list all databases
+
+## List tables in database using psql
+> \dt: list all tables in the current database
