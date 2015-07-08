@@ -32,7 +32,9 @@ $ rmdir foo # Directory
 $ cat foo # Display all contents of file foo
 $ less foo # Display one page at a time of file foo 
 $ head file # Display the first few lines of file foo (default is first 10)
+			# Use -# as an option to display first # lines
 $ tail file # Display the last few lines of file foo (default is last 10)
+		    # Use -# as an option to display last # lines
 ```
 
 ## Copy a file
