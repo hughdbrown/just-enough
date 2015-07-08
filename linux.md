@@ -4,13 +4,14 @@
 ```bash
 $ man command # Read the online manual page for 'command'
 $ whatis command # Brief description of 'command'
+```
 
 ## Moving Around Directories
 ```bash 
 $ cd # Move to home directory. 
 $ cd .. # Move up one directory
 $ cd ../foo # Move up one directory, then to foo within that
-$ cd ~/foo # Move too home directory, then to foo within home
+$ cd ~/foo # Move to home directory, then to foo within home
 $ pwd # display the path of the current working directory
 $ ls # list files and directories in current directory
 ```
@@ -60,5 +61,6 @@ $ rsync --recursive --verbose --whole-file --progress . myname@192.168.1.2:/tmp/
 $ command > file # Redirect standard output from command into file
 $ command >> file # Append standard output from command to file 
 $ command < file # Redirect standard input from file
-$ command1 | command2 # Create a pipe that takes hte output of command1 and uses it as the input for command2
+$ command1 | command2 # Create a pipe that takes the output 
+					  # of command1 and uses it as the input for command2
 ```
