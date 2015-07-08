@@ -7,8 +7,8 @@ $ touch foo
 
 ## Delete a file, directory 
 ```bash
-$ rm foo
-$ rmdir foo
+$ rm foo # File
+$ rmdir foo # Directory 
 ```
 
 ## Write out contents of file to screen
