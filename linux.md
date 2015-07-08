@@ -1,19 +1,30 @@
 # Just enough Linux to poke yourself in the eye
 
+## Moving Around Directories
+```bash 
+$ cd # Move to home directory. 
+$ cd .. # Move up one directory
+$ cd ../foo # Move up one directory, then to foo within that
+$ cd ~/foo # Move too home directory, then to foo within home
+```
+
 ## Create an empty file
 ```bash
 $ touch foo
 ```
 
-## Delete a file, directory 
+## Delete a file/directory 
 ```bash
 $ rm foo # File
 $ rmdir foo # Directory 
 ```
 
-## Write out contents of file to screen
+## Displaying Contnents of Files to Screen
 ```bash
-$ cat foo
+$ cat foo # Display all contents of file foo
+$ less foo # Display one page at a time of file foo 
+$ head file # Display the first few lines of file foo (default is first 10)
+$ tail file # Display the last few lines of file foo (default is last 10)
 ```
 
 ## Copy a file
