@@ -170,7 +170,7 @@ $ git remote update
 $ git rebase -p FETCH_HEAD
 ```
 
-== Common ancestor for two branches
+## Common ancestor for two branches
 
 ```bash
 $ git merge-base A B
