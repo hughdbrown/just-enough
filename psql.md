@@ -7,7 +7,7 @@
 > \connect (or \c) database_name
 
 ## Create Table
-> CREATE TABLE 'table': AS (Enter Query) Create table named 'table' populate with results from Query
+> CREATE TABLE 'table' AS (Enter Query): Create table named 'table' populate with results from Query
 
 ## Delte Table
 > DROP TABLE 'table': Delete table named 'table'
