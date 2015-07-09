@@ -9,6 +9,9 @@
 ## List tables in database using psql
 > \dt: list all tables in the current database
 
+## Examine a Table
+> \d table: list variables, types of each variable, and any modifiers in 'table'
+
 ## Load csv file from within psql
 [reference](http://stackoverflow.com/questions/2987433/how-to-import-csv-file-data-into-a-postgres-table)
 
