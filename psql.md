@@ -6,8 +6,10 @@
 ## Connect to a database using psql
 > \connect (or \c) database_name
 
-## Create/Delete Table
-> CREATE TABLE 'table' AS (Enter Query) # Create table named 'table' populate with results from 										# 'Query'
+## Create Table
+> CREATE TABLE 'table' AS (Enter Query) # Create table named 'table' populate with results from Query'
+
+## Delte Table
 > DROP TABLE 'table' # Delete table named 'table'
 
 ## List all database using psql
