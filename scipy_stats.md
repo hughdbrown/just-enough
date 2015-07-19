@@ -21,7 +21,11 @@ poisson = scs.poisson(lambda) # Variable poisson now holds a poisson distributio
 							  # mean lambda and variance lambda. 
 geometric = scs.geom(p) # Variable geometric now holds a geometric distribution with 
 						# mean 1/p and variance 1 - p / (p ^ 2). 
-uniform = scs.uniform(scale = a, loc = b) # Variable that holds the uniform distribution 											  	  # ranging from a-b. 
+uniform = scs.uniform(scale = a, loc = b) # Variable that holds the uniform distribution
+ 									  	  # ranging from a-b. 
+
+** Note that there are A TON of distributions available to grab just like this - these
+are just the most common ones that I've used thus far. **
 ```
 
 #### Useful Distribution Methods
