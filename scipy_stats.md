@@ -7,7 +7,7 @@ import scipy.stats as scs # Follow the norm! It makes code more re-usable.
 
 ## Distributions and their methods
 
-#### Distributions
+#### Distributions - There are A TON of these; these are just the ones I've used most. 
 ```Python
 norm = scs.norm(mu, sd) # Variable norm now holds a normal/gaussian distriution with 
 						# mean mu and standard deviation sd. 
@@ -24,8 +24,6 @@ geometric = scs.geom(p) # Variable geometric now holds a geometric distribution 
 uniform = scs.uniform(scale = a, loc = b) # Variable that holds the uniform distribution
  									  	  # ranging from a-b. 
 
-Note that there are A TON of distributions available to grab just like this - these
-are just the most common ones that I've used thus far.
 ```
 
 #### Useful Distribution Methods
