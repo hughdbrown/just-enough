@@ -1,6 +1,6 @@
 # Just enough Pandas to poke yourself in the eye
 
-## Import Pandas 
+## Standard Import Pandas 
 ```Python
 import pandas as pd
 ```
