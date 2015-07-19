@@ -35,6 +35,10 @@ df['Column_Name'] # Pulls 'Column_Name' from data. Try not to put spaces in colu
 				  # if you can help it. There are number of functions where this will save you 
 				  # some hassle. 
 df.Column_Name # Pulls 'Column_Name' from data (serves same purpose as above). 
+df.loc['foo'] # Allows you to access an index with a label - i.e. pull rows where index = 'foo'
+df.iloc[#] # Allows you to access an index with a number - i.e. pull row where index = #
+df.ix[] # Allows you to access an index with a number of label. It's primarily label based
+	    # but will fall back to integer access unless the corresponding index is integer-based.
 ```
 
 ## Data Work 
@@ -51,6 +55,8 @@ series.nsmallest(n) # Returns the n smallest observations from variable series.
 
 ## Your best friends. 
 ```Python
+df.apply() # Applies a function.operation to a column of a databse. Can be used on the results 
+		   # of groupby(). 
 df.eval(string) # Evaluates the string using columns/info. from the database. The most useful time 
 				# for this is when creating new columns: df['new_column'] = df.eval('Col1 / Col2')
 df.query(string) # Pulls data from the database for which the conditions in 'string' are matched.
