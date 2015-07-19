@@ -7,7 +7,7 @@ import scipy.stats as scs # Follow the norm! It makes code more re-usable.
 
 ## Distributions and their methods
 
-##### Distributions - There are A TON of these; these are just the ones I've used most. 
+##### Distributions - There are A TON of these. Here are the ones I've used most:  
 ```Python
 norm = scs.norm(mu, sd) # Variable norm now holds a normal/gaussian distriution with 
 						# mean mu and standard deviation sd. 
