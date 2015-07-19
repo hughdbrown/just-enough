@@ -24,8 +24,8 @@ geometric = scs.geom(p) # Variable geometric now holds a geometric distribution 
 uniform = scs.uniform(scale = a, loc = b) # Variable that holds the uniform distribution
  									  	  # ranging from a-b. 
 
-** Note that there are A TON of distributions available to grab just like this - these
-are just the most common ones that I've used thus far. **
+Note that there are A TON of distributions available to grab just like this - these
+are just the most common ones that I've used thus far.
 ```
 
 #### Useful Distribution Methods
