@@ -18,11 +18,13 @@ column_vect = np.array([[13], [9]]) # Create a column vector with given values.
 
 row_vect = np.array(i_array) # Create a row vector from array variable i_array.
 column_vect = np.array(i_array).reshape(len(i_array), 1) # Create a column 
-														 # matrix from array variable
+														 # vector from array variable
 														 # i_array. 
-mat = np.array(i_array).reshape(m, n) # Create an matrix with m rows and n columns from 
+mat = np.array(i_array).reshape(m, n) # Create a matrix with m rows and n columns from 
 									  # array variable i_array.
-feature_mat = df.values # Create a feature matrix with the data values from dataframe df.
+feature_mat = df.values # Create a feature matrix with the data values from dataframe df 
+						# (This is effectively just an m x n matrix where m is the number of
+						# obs in your df and n is the number of variables). 
 
 np.zeros(m,n) # Create a matrix of zeros with m rows and n columns. 
 np.ones(m,n) # Create a matrix of ones with m rows and n columns.
