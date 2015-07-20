@@ -33,10 +33,10 @@ np.identity(n) # Create an identity matrix with n rows and n columns.
 
 ## Useful methods
 ```Python
-.mean(axis = 0/1) # Calculates the mean of the entire array, or by rows if axis = 0 and columns 
+.mean(axis = 0/1) # Calculates the mean of the entire array, or by clumns if axis = 0 and rows 
 				  # if axis = 1. 
-.std(axis = 0/1) # Calculates the standard deviation of the entire array, or by rows if axis = 0
-				 # and columns if axis = 1. 
+.std(axis = 0/1) # Calculates the standard deviation of the entire array, or by columns if axis = 0
+				 # and rows if axis = 1. 
 .shape() # Returns the shape of the matrix in a tuple: (m, n): m is the # rows and n # columns. 
 .transpose() # Returns the transpose of the matrix. 
 .reshape(m, n) # Reshapes the matrix to have m rows and n columns. 
