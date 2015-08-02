@@ -10,6 +10,20 @@ import pandas as pd # Follow the norm! It makes your code more reusable.
 df = pd.read_csv(file_path) # Read in the data from 'file_path' and store it in a DataFrame df. 
 ```
 
+## Saving Data 
+
+There are loads of to_x methods on dfs, but these are the ones that I think are most useful. 
+
+```
+df.to_dict() # Outputs a nested dictionary from DataFrame df.
+df.to_csv() # Outputs a CSV from DataFrame df. 
+df.to_pickle() # Outputs a pickle object from DataFrame df. 
+df.to_html() # Outputs DataFrame df in HTML format. 
+df.to_json() # Outputs DataFrame df in JSON format. 
+df.to_sql() # Outputs DataFrame df in SQL format. 
+df.to_excel() # Outputs DataFrame df in excel format. 
+```
+
 ## Data Frame settings-type commands. 
 ```Python
 pd.set_option() # Set's certain options for the pandas environment. 
@@ -25,6 +39,7 @@ df.reset_index('Foo') # Moves index Foo back into data frame as column.
 df.describe() # Lists summary stats for each variable in the data. 
 df.shape # Outputs a tuple of the number of rows and columns in the DataFrame.  
 df.columns # Outputs a list of the column names of the DataFrame. 
+df.index # Outputs a list of the indicies of the DataFrame. 
 df.dtypes # Lists the data types of each of the variables in the DataFrame. 
 df.head(n) # Show the first n rows of the data. 
 df.tail(n) # Show the last n rows of the data. 
@@ -34,8 +49,11 @@ df.tail(n) # Show the last n rows of the data.
 ```Python
 df['Column_Name'] # Pulls 'Column_Name' from data. Try not to put spaces in column names 
 				  # if you can help it. There are number of functions where this will save you 
-				  # some hassle. 
-df.Column_Name # Pulls 'Column_Name' from data (serves same purpose as above). 
+				  # some hassle. This returns a Pandas Series. 
+df.Column_Name # Pulls 'Column_Name' from data (serves same purpose as above), and returns 
+		       # a Pandas Series. 
+df.Column_Name.values # Pulls 'Column_Name' from data, but returns a numpy array. The .values 
+				      # also works when accesing columns through brackets (i.e. df['Column_Name']).
 df.loc['foo'] # Allows you to access an index with a label - i.e. pull rows where index = 'foo'
 df.iloc[n] # Allows you to access an index with a number - i.e. pull row n 
 df.ix[] # Allows you to access an index with a number or label. It's primarily label based
@@ -44,14 +62,19 @@ df.ix[] # Allows you to access an index with a number or label. It's primarily l
 
 ## Data Work 
 ```Python
-df.groupby(['Column 1', 'Column 2']) # Groups the data by Column1 and Column2. From here, you can 
+df.groupby(['Column1', 'Column2']) # Groups the data by Column1 and Column2. From here, you can 
 		   							 # chain any number of methods (sum(), count(), etc.) 
+df.sort(['Column1','Column2']) # Returns the DataFrame df sorted first by column1 and then column2.								  # Note if you want to sort in place you need to set inplace = True. 
 ```
 
 ## Series Commands
 ```Python
 series.nlargest(n) # Returns the n largest observations from Pandas series variable series. 
 series.nsmallest(n) # Returns the n smallest observations from Pandas series variable series. 
+series.value_counts() # Returns the count of each of the unique values from Pandas series varible 
+					 # series. 
+series.sort()  # Sorts the series in ascending order. Note if this is a column from a dataframe
+			   # you must make a copy first. 
 ```
 
 ## Your best friends. 
