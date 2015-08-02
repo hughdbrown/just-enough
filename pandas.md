@@ -31,7 +31,8 @@ df.rename() # Can use to rename columns - df.rename(columns={key:val}) where key
 		    # and val is the new name. 
 df.set_index('Column1') # Sets df index to 'Column1'. Supports multiple columns in 
 						# a list: ['Column1', 'Column2']. 
-df.reset_index('Foo') # Moves index Foo back into data frame as column.
+df.reset_index('Foo') # Moves index Foo back into data frame as column. Will throw all levels of 
+					  # of the index into the df if left empty. 
 ```
 
 ## Basic visualization. 
