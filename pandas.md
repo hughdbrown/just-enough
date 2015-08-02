@@ -59,6 +59,7 @@ df.loc['foo'] # Allows you to access an index with a label - i.e. pull rows wher
 df.iloc[n] # Allows you to access an index with a number - i.e. pull row n 
 df.ix[] # Allows you to access an index with a number or label. It's primarily label based
 	    # but will fall back to integer access unless the corresponding index is integer-based.
+	    # This also allows you to access a column - df.ix[:, 'Column1']. 
 ```
 
 ## Data Work 
