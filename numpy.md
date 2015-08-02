@@ -31,14 +31,24 @@ np.ones(m,n) # Create a matrix of ones with m rows and n columns.
 np.identity(n) # Create an identity matrix with n rows and n columns.  
 ```
 
-## Useful methods
+## Creating Matricies 
+
+These have some different methods/properites than numpy arrays. They are two different
+kinds of objects. 
+
 ```Python
-.mean(axis = 0/1) # Calculates the mean of the entire array, or by clumns if axis = 0 and rows 
+np.matrix(i_array) # Create a numpy matrix from variable i_array. 
+```
+
+## Useful methods of arrays/matricies. 
+```Python
+.mean(axis = 0/1) # Calculates the mean of the array/matrix, or by columns if axis = 0 and rows 
 				  # if axis = 1. 
-.std(axis = 0/1) # Calculates the standard deviation of the entire array, or by columns if axis = 0
+.std(axis = 0/1) # Calculates the standard deviation of the array/matrix, or by columns if axis = 0
 				 # and rows if axis = 1. 
 .shape() # Returns the shape of the matrix in a tuple: (m, n): m is the # rows and n # columns. 
-.transpose() # Returns the transpose of the matrix. 
+.transpose() # Returns the transpose of the array/matrix. 
+.T # Also returns the transpose of the array/matrix. 
 .reshape(m, n) # Reshapes the matrix to have m rows and n columns. 
 ```
 
@@ -50,3 +60,45 @@ A[1] # Get row 1.
 A[:, 1] # Get Column 1. 
 A[0:2, 1:3] # Get elements from rows 0-1 and columns 1-2.
 ```
+
+## Matrix Math 
+
+Assume A and B are both 2-D numpy arrays, and d is a scalar. If we are going element-wise here, A and B must have 1-dimension in common. If we are doing matrix multiplication or getting the inner/dot product, then A must have the same number of columns as B does rows. 
+
+```Python
+C = A [+ -] d # Add/Subtract d to each element in A.
+C = A [ * /] d # Multiply/Divided each element in A by d. 
+C = A [+ -] B # Perform element-wise addition/subtraction between A and B. 
+C = A [* /] B # Perform element-wise multiplication/division between A and B. 
+C = np.dot(A, B) # Perform matrix-multplication/get the inner/dot product between A and B.
+C = A ** n # Raise every element in A to the nth power. 
+C = np.linalg.matrix_power(A, n) # Raise the square matrix A to the nth power. This is 
+								 # different simply raising each element to the nth power. 
+``` 
+
+Now assume that A and B are both numpy matricies. 
+
+```Python
+C = A * B # Perform matrix-multplication/get the inner/dot product between A and B.
+C = A ** n # Raise the square matrix A to the nth power. This is 
+		   # different simply raising each element to the nth power. 
+```
+
+## Useful numpy functions. 
+
+```
+np.argsort(C) # Return the indicies of sorted elements in C. This returns the same shape as 	
+			  # C, sorting with rows if axis argument is not passed in. Sorts within rows if 
+			  # axis = 1, within columns if axis = 0. 
+np.column_stack((A, B)) # Stack arrays/lists A and B as columns. A and B must have the same 
+						   # number of rows. 
+np.argmax(A) # Returns the index/indicies of the maximum element in A. This returns the index 
+			 # of the maximum element in A if no axis is specified (where indicies are counted
+			 # sequentially across rows and down columns if A is 2D). If axis is 0, it returns
+			 # the max index within columns, and within rows if axis = 1. 
+np.argmin(A) # The min. analog of np.argmax(). 
+np.ravel(A) # Flattens any 2-D array into 1-D. 
+```
+
+
+
