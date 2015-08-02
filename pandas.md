@@ -73,7 +73,7 @@ df.sort(['Column1','Column2']) # Returns the DataFrame df sorted first by column
 ```Python
 series.nlargest(n) # Returns the n largest observations from Pandas series variable series. 
 series.nsmallest(n) # Returns the n smallest observations from Pandas series variable series. 
-series.value_counts() # Returns the count of each of the unique values from Pandas series varible 
+series.value_counts() # Returns the count of each of the unique values from Pandas series variable 
 					 # series. 
 series.sort()  # Sorts the series in ascending order. Note if this is a column from a dataframe
 			   # you must make a copy first. 
