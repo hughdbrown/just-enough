@@ -7,10 +7,14 @@
 > \connect (or \c) database_name
 
 ## Create Table
-> CREATE TABLE 'table' AS (Enter Query): Create table named 'table' populate with results from Query
-
+```
+CREATE TABLE 'table' AS (Enter Query) # Create table named 'table', populate with results from 
+									  # Query
+```
 ## Delete Table
-> DROP TABLE 'table': Delete table named 'table'
+```
+DROP TABLE 'table' # Delete table named 'table'
+```
 
 ## List all database using psql
 > \list or \l: list all databases
@@ -35,7 +39,8 @@ FROM table1; # Returns column1 and column2 from table1.
 SELECT column1, column2 
 FROM table1
 WHERE column1 == value; # Returns column1 and column2 from table 1 for observations where 
-						# column1 == value. You can also use greater than, less than, etc. as well # as throwing subqueries in there. 
+						# column1 == value. You can also use greater than, less than, etc. as well
+						# as throwing subqueries in there. 
 
 SELECT AVG(column1), column2 
 FROM table1 
@@ -47,4 +52,4 @@ WHERE column1 == value; # Returns average of column1 and column2 from table1 for
 
 ```
 SELECT AVG(column1) as col1_avg
-FROM table1; 	# Returns the average of column1 labeled as col1_avg from table1. 
+FROM table1; 	# Returns the average of column1 from table1, labeled as col1_avg. 
