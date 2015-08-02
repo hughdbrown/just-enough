@@ -28,11 +28,14 @@ uniform = scs.uniform(scale = a, loc = b) # Variable that holds the uniform dist
 
 ##### Useful Distribution Methods
 ```Python
-To Come!
+dist.rvs(size = n) # return n random variates that follow distribution dist. 
+dist.pdf(x) # Return the pdf of x in distribution dist. 
+dist.cdf(x) # Return the cdf of x in distribution dist. 
+dist.sf(x) # Returns survival function (1 - cdf) of x in distribution dist. 
 ```
 
 ## Standard Error
 ```Python
-se = scs.sem(data) # SE now holds the standard-error of the mean for input data. 
+se = scs.sem(data) # se now holds the standard-error of the mean for input data. 
 ``` 
 
