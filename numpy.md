@@ -98,6 +98,7 @@ np.argmax(A) # Returns the index/indicies of the maximum element in A. This retu
 			 # the max index within columns, and within rows if axis = 1. 
 np.argmin(A) # The min. analog of np.argmax(). 
 np.ravel(A) # Flattens any 2-D array into 1-D. 
+np.random.choice(A, 10, replace = False) # Select 10 random elements from A, without replacement.  
 ```
 
 
