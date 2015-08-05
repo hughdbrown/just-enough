@@ -7,7 +7,8 @@ import pandas as pd # Follow the norm! It makes your code more reusable.
 
 ## Reading Data
 ```Python
-df = pd.read_csv(file_path) # Read in the data from 'file_path' and store it in a DataFrame df. 
+df = pd.read_csv(file_path) # Read in the data from the csv at 'file_path' and store it in DataFrame df. 
+df = pd.read_pickle(file_path) # Read in the data from the pickle at 'file_path' and store it in DataFrame df. 
 ```
 
 ## Saving Data 
