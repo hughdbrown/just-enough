@@ -100,6 +100,9 @@ np.argmin(A) # The min. analog of np.argmax().
 np.ravel(A) # Flattens any 2-D array into 1-D. 
 np.random.choice(A, 10, replace = False) # Select 10 random elements from A, without replacement.  
 np.where(A == 0) # Returns the indicies where the values in the numpy array/matrix A are equal to 0. 
+np.delete(A, [1, 2, 3]) # Deletes the elements at the indicies 1, 2, 3 from the 1-D numpy array A. 
+						# This works on matricies and 2-D arrays as well; just be careful to pass it 
+						# the right indicies and/or specify which axis to delete from. 
 ```
 
 
