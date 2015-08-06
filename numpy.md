@@ -99,6 +99,7 @@ np.argmax(A) # Returns the index/indicies of the maximum element in A. This retu
 np.argmin(A) # The min. analog of np.argmax(). 
 np.ravel(A) # Flattens any 2-D array into 1-D. 
 np.random.choice(A, 10, replace = False) # Select 10 random elements from A, without replacement.  
+np.where(A == 0) # Returns the indicies where the values in the numpy array/matrix A are equal to 0. 
 ```
 
 
