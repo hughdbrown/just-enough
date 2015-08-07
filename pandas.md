@@ -71,7 +71,8 @@ df.sort(['Column1','Column2']) # Returns the DataFrame df sorted first by column
 df.drop('Column1', inplace=True) # Drop column1 from DataFrame df, inlace. If inplace=False, then it 
 								 # returns a new DataFrame with the column dropped, and the original 
 								 # DataFrame df remains unchanged. 
-df1.join(df2) # Join df1 to df2 on the index/indicies (must be the same). Returns a new joined DataFrame.
+df1.join(df2) # Join df1 to df2 on the index/indicies (must be the same). Returns a new joined 	
+			  # DataFrame.
 pd.merge(df1, df2, on='column') # Merged df1 and df2 by 'column'. Returns a new merged DataFrame. 
 ```
 
@@ -96,5 +97,6 @@ df.query(string) # Pulls data from the database for which the conditions in 'str
 
 ## Other random commands. 
 ```Python
-dummies = pd.get_dummies(df['Category']) # Returns dummy variables for the column 'Category' from the df. 
+dummies = pd.get_dummies(df['Category']) # Returns dummy variables for the column 
+										 # 'Category' from the df. 
 ```
