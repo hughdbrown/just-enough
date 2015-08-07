@@ -104,7 +104,7 @@ np.where(A == 0) # Returns the indicies where the values in the numpy array/matr
 np.delete(A, [1, 2, 3]) # Deletes the elements at the indicies 1, 2, 3 from the 1-D numpy array A.
 						# This works on matricies and 2-D arrays as well; just be careful to pass 
 						# it the right indicies and/or specify which axis to delete from. 
-np.square(A) # Returns the element wise-square of the input matrix. 
+np.square(A) # Returns the element-wise square of the input matrix. 
 ```
 
 
