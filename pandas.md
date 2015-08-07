@@ -67,7 +67,12 @@ df.ix[] # Allows you to access an index with a number or label. It's primarily l
 ```Python
 df.groupby(['Column1', 'Column2']) # Groups the data by Column1 and Column2. From here, you can 
 		   							 # chain any number of methods (sum(), count(), etc.) 
-df.sort(['Column1','Column2']) # Returns the DataFrame df sorted first by column1 and then column2.								  # Note if you want to sort in place you need to set inplace = True. 
+df.sort(['Column1','Column2']) # Returns the DataFrame df sorted first by column1 and then column2.								  # 								   # Note if you want to sort in place you need to set inplace = True. 
+df.drop('Column1', inplace=True) # Drop column1 from DataFrame df, inlace. If inplace=False, then it 
+								 # returns a new DataFrame with the column dropped, and the original 
+								 # DataFrame df remains unchanged. 
+df1.join(df2) # Join df1 to df2 on the index/indicies (must be the same). Returns a new joined DataFrame.
+pd.merge(df1, df2, on='column') # Merged df1 and df2 by 'column'. Returns a new merged DataFrame. 
 ```
 
 ## Series Commands
@@ -88,3 +93,8 @@ df.eval(string) # Evaluates the string using columns/info. from the database. Th
 				# for this is when creating new columns: df['new_column'] = df.eval('Col1 / Col2')
 df.query(string) # Pulls data from the database for which the conditions in 'string' are matched.
 ``` 
+
+## Other random commands. 
+```Python
+dummies = pd.get_dummies(df['Category']) # Returns dummy variables for the column 'Category' from the df. 
+```
