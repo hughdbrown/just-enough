@@ -7,15 +7,17 @@ import pandas as pd # Follow the norm! It makes your code more reusable.
 
 ## Reading Data
 ```Python
-df = pd.read_csv(file_path) # Read in the data from the csv at 'file_path' and store it in DataFrame df. 
-df = pd.read_pickle(file_path) # Read in the data from the pickle at 'file_path' and store it in DataFrame df. 
+df = pd.read_csv(file_path) # Read in the data from the csv at 'file_path' and store 
+							# it in DataFrame df. 
+df = pd.read_pickle(file_path) # Read in the data from the pickle at 'file_path' and store
+							   # it in DataFrame df. 
 ```
 
 ## Saving Data 
 
 There are loads of to_x methods on dfs, but these are the ones that I think are most useful. 
 
-```
+```Python
 df.to_dict() # Outputs a nested dictionary from DataFrame df.
 df.to_csv() # Outputs a CSV from DataFrame df. 
 df.to_pickle() # Outputs a pickle object from DataFrame df. 
