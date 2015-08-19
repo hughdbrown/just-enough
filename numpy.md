@@ -105,6 +105,8 @@ np.delete(A, [1, 2, 3]) # Deletes the elements at the indicies 1, 2, 3 from the 
 						# This works on matricies and 2-D arrays as well; just be careful to pass 
 						# it the right indicies and/or specify which axis to delete from. 
 np.square(A) # Returns the element-wise square of the input matrix. 
+np.cumsum(A) # Returns the cumulative sum along the axis dimension for A, or the cumulative 
+			 # sum for the numpy array if it is 1-D. 
 ```
 
 
