@@ -71,4 +71,19 @@ Booleans:
 	of that). 
 ```
 
+#### Variables 
+
+Variables in python do not have to be declared (either as a certain type or using the keyword var), and can change types freely. For example: 
+
+a = -1 # a starts off as an integer
+a = "I'm a new type" # a is now a string
+a = ["I'm", "another", "type", "now"] # a is now a list
+a = ('Yet', 'Another', 'Type', '!!!') # a is now a tuple
+
+#### Immutability
+
+Certain objects in python are immutable, meaning that you can't change their values in place. In 
+terms of the built-in object types above, numbers, strings, and tuples are immutable, whereas 
+lists, dictionaries, and sets are not. 
+
 
