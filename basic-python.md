@@ -4,7 +4,8 @@
 
 For all of the below, these are simply for reference - we'll get into some of the inner 
 workings of these things later. For now, I just want to introduce you to the built-in 
-object types and get you a more familiar with their different representations. 
+object types and get you a more familiar with their different representations. Note that 
+**everything** in python is an object. 
 
 ```
 Numbers:  
@@ -116,6 +117,26 @@ a[2:] = 'thon'
 a[-2:] = 'on'
 ```
 
+#### Indexing Dictionaries
+
+Python dictionaries are completely different from sequences, and are known as _mappings_. Mappings store objects by _key_ instead of by relative position (i.e. what sequences do). That means that to access an object within a dictionary, we must access it by the key associated with it. This also means that each key in a dictionary must be unique. If you try to construct a dictionary with a repeated key using the dict() constructer, it will give you an error. If you try to use the hard-coded method and repeat a key, the dictionary will simply hold the last value that you assigned to the key. For example: 
+
+```
+dict(hold=10, hold=10) = Error! Error!
+{'hold': 10, 'hold': 12} = {'hold': 12}
+```
+
+Like previously mentioned, we access dictionaries by key, and the dictionaries values can hold entire objects. 
+
+Say a is a dictionary: a = {'list1': [1, 2, 3, 4, 5], 'tuple1': (1, 2, 3, 4, 5), 'val': 5}
+
+```
+a['list1'] = [1, 2, 3, 4, 5]
+a['list1'][2] = 3
+a['tuple1'] = (1, 2, 3, 4, 5)
+a['tuple1'][4] = 5
+a['val'] = 5
+``` 
 
 #### Immutability
 
