@@ -133,7 +133,7 @@ Like previously mentioned, we access dictionaries by key, and the dictionary's v
 
 Say a is a dictionary: a = {'list1': [1, 2, 3, 4, 5], 'tuple1': (1, 2, 3, 4, 5), 'val': 5}
 
-```
+```python
 a['list1'] = [1, 2, 3, 4, 5]
 a['list1'][2] = 3
 a['tuple1'] = (1, 2, 3, 4, 5)
@@ -153,7 +153,7 @@ to be able to use when you need to gaurentee that an objects' values can't chang
 program. With mutable objects, their values can be changed at any time and any place, whether you expect it 
 or not. 
 
-```
+```python
 a = 'String'
 a[2] = 'p' # ERROR ERROR! You can't change a string in place. 
 a = 'Bozo' # I can assign a different string to the variable a, but I can't change a part of a in place. 
