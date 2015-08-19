@@ -122,7 +122,7 @@ a[-2:] = 'on'
 Python dictionaries are completely different from sequences, and are known as _mappings_. Mappings store objects by _key_ instead of by relative position (i.e. what sequences do). That means that to access an object within a dictionary, we must access it by the key associated with it. This also means that each key in a dictionary must be unique. If you try to construct a dictionary with a repeated key using the dict() constructer, it will give you an error. If you try to use the hard-coded method and repeat a key, the dictionary will simply hold the last value that you assigned to the key. For example: 
 
 ```
-dict(hold=10, hold=10) = Error! Error!
+dict(hold=10, hold=10) = ERROR ERROR!
 {'hold': 10, 'hold': 12} = {'hold': 12}
 ```
 
@@ -142,12 +142,20 @@ a['val'] = 5
 
 Certain objects in python are immutable, meaning that you can't change their values in place. In 
 terms of the built-in object types above, numbers, strings, and tuples are immutable, whereas 
-lists, dictionaries, and sets are not. 
+lists, dictionaries, and sets are not (i.e. they're mutable). 
 
-What does this mean?? I've never run into immutability issues with numbers, but let's look at the remaining
-data types. 
+What does this mean?? I've never run into immutability issues with numbers, but let's look at some of the other
+data types. In practice, I don't run into immutability issues often, but immutability can be a great property 
+to be able to use when you need to gaurentee that an objects' values can't change at any time during your 
+program. With mutable objects, their values can be changed at any time and any place, whether you expect it 
+or not. 
 
 ```
 a = 'String'
+a[2] = 'p' # ERROR ERROR! You can't change a string in place. 
+a = 'Bozo' # I can assign a different string to the variable a, but I can't change a part of a in place. 
+
+b = ['l', 'i', 's', 't'] # b is a list. 
+b[0] = 'p' # I can change b in place. b now equals ['p', 'i', 's', 't']
 ```
 
