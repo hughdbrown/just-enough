@@ -75,10 +75,47 @@ Booleans:
 
 Variables in python do not have to be declared (either as a certain type or using the keyword var), and can change types freely. For example: 
 
+```
 a = -1 # a starts off as an integer
 a = "I'm a new type" # a is now a string
 a = ["I'm", "another", "type", "now"] # a is now a list
 a = ('Yet', 'Another', 'Type', '!!!') # a is now a tuple
+```
+
+#### Indexing Sequences
+
+Any ordered sequence (i.e. a data type that assumes a positional ordering) in python can be accesed via
+index. Indexing starts at 0, and continues up to the length of object - 1. We can access either single 
+indices in our object or multiple indicies at once. 
+
+Say a is a list. a = [1, 2, 3, 4, 5]
+
+```
+a[0] = 1 # Index the first item. 
+a[4] = 5 # Index the last item. 
+a[-1] = 5 # Index the last item. When we use negative indices we start from the end and index to the front.
+a[:] = [1, 2, 3, 4, 5] # Using ':' in a sequence index returns the entire sequence. 
+a[:2] = [1, 2] # Returns everything from the beginning of the sequence up to but NOT INCLUDING the element 
+			   # at index 2. 
+a[2:] = [3, 4, 5] # Returns everything starting at the element at index 2 up to the end of the sequence. 
+a[-2:] = [4, 5] # Returns everything starting from the 2nd to last element to the end of the sequence. 
+```
+
+Now say a is a string. Strings maintain a positional ordering in python, so any of the indexing statements
+above will work on a string. 
+
+a = 'python'
+
+```
+a[0] = 'p'
+a[4] = 'o'
+a[-1] = 'n'
+a[:] = 'python'
+a[:2] = 'py'
+a[2:] = 'thon'
+a[-2:] = 'on'
+```
+
 
 #### Immutability
 
@@ -86,4 +123,10 @@ Certain objects in python are immutable, meaning that you can't change their val
 terms of the built-in object types above, numbers, strings, and tuples are immutable, whereas 
 lists, dictionaries, and sets are not. 
 
+What does this mean?? I've never run into immutability issues with numbers, but let's look at the remaining
+data types. 
+
+```
+a = 'String'
+```
 
