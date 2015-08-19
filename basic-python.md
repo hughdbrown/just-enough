@@ -4,8 +4,8 @@
 
 For all of the below, these are simply for reference - we'll get into some of the inner 
 workings of these things later. For now, I just want to introduce you to the built-in 
-object types and get you a more familiar with their different representations. Note that 
-**everything** in python is an object. 
+object types and get you more familiar with their different representations. The first thing
+to note is that **everything** in python is an object. 
 
 ```
 Numbers:  
@@ -45,7 +45,7 @@ Dictionaries:
 
 	Dictionaries come in the format of key/value pairs, where each value in the data is 
 	referenced by its key. For example, a['food'] returns 'spam', and a['taste'] returns 
-	yum. Dictionaries are not ordered. 
+	'yum'. Dictionaries are not ordered. 
 
 Tuples: 
 	Hard-Coded: a = (1, 'spam', 4, 'U')
@@ -74,10 +74,12 @@ Booleans:
 
 #### Variables 
 
-Variables in python do not have to be declared (either as a certain type or using the keyword var), and can change types freely. For example: 
+Variables in python do not have to be declared (either as a certain type or using the keyword var), and can change types freely. In typical coding fashion, the '=' below reads as 'assigns' instead of testing for 
+equality. For example, the first statement below assigns the value of -1 to a, rather than testing if a is 
+equal to -1.  
 
-```
-a = -1 # a starts off as an integer
+```python
+a = -1 # a starts off as an integer. 
 a = "I'm a new type" # a is now a string
 a = ["I'm", "another", "type", "now"] # a is now a list
 a = ('Yet', 'Another', 'Type', '!!!') # a is now a tuple
@@ -86,18 +88,19 @@ a = ('Yet', 'Another', 'Type', '!!!') # a is now a tuple
 #### Indexing Sequences
 
 Any ordered sequence (i.e. a data type that assumes a positional ordering) in python can be accesed via
-index. Indexing starts at 0, and continues up to the length of object - 1. We can access either single 
+index. Indexing starts at 0, and continues up to the length of (object - 1). We can access either single 
 indices in our object or multiple indicies at once. 
 
 Say a is a list. a = [1, 2, 3, 4, 5]
 
-```
+```python
 a[0] = 1 # Index the first item. 
 a[4] = 5 # Index the last item. 
-a[-1] = 5 # Index the last item. When we use negative indices we start from the end and index to the front.
+a[-1] = 5 # Index the last item. When we use negative indices we start from the end and index to 
+		  # the front.
 a[:] = [1, 2, 3, 4, 5] # Using ':' in a sequence index returns the entire sequence. 
-a[:2] = [1, 2] # Returns everything from the beginning of the sequence up to but NOT INCLUDING the element 
-			   # at index 2. 
+a[:2] = [1, 2] # Returns everything from the beginning of the sequence up to but NOT INCLUDING the 
+			   # element at index 2. 
 a[2:] = [3, 4, 5] # Returns everything starting at the element at index 2 up to the end of the sequence. 
 a[-2:] = [4, 5] # Returns everything starting from the 2nd to last element to the end of the sequence. 
 ```
@@ -107,7 +110,7 @@ above will work on a string.
 
 a = 'python'
 
-```
+```python
 a[0] = 'p'
 a[4] = 'o'
 a[-1] = 'n'
@@ -126,7 +129,7 @@ dict(hold=10, hold=10) = ERROR ERROR!
 {'hold': 10, 'hold': 12} = {'hold': 12}
 ```
 
-Like previously mentioned, we access dictionaries by key, and the dictionaries values can hold entire objects. 
+Like previously mentioned, we access dictionaries by key, and the dictionary's values can hold entire objects. 
 
 Say a is a dictionary: a = {'list1': [1, 2, 3, 4, 5], 'tuple1': (1, 2, 3, 4, 5), 'val': 5}
 
