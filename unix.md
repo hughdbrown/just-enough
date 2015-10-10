@@ -6,6 +6,15 @@ I wont cover all options/flags of commands/programs here, but know that those ar
 
 ```unix
 
+* Maybe most importantly, there are a couple of options built in to help you 
+  with commands. If you know the one you want to use, you can type in 
+  'man command' to see how that command works, what options are available, 
+  etc. If you have no idea what command you want to use, but have an idea
+  of what it involves, you can type 'man -k idea', or 'apropos idea' to 
+  obtain a list of possible commands to use. For example, I could type
+  'man -k mail', or 'apropos mail'. This typically gives you a long list 
+  of commands and you might be better of with google. 
+
 * Prompts usually start with $ or %. If it starts with #, this usually
   means that you are logged in as the superuser. So be aware. 
 
@@ -24,7 +33,6 @@ I wont cover all options/flags of commands/programs here, but know that those ar
 * Files prefixed with a . are almost always hidden. This usually includes 
   your .bash_profile, where you can customize your unix account/shell 
   settings. Aliases are pretty cool - you should check them out. 
-
 ```
 ## Basics, and Environment Variables 
 
