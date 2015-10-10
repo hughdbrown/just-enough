@@ -4,7 +4,7 @@ I wont cover all options/flags of commands/programs here, but know that those ar
 
 ## Notes 
 
-```bash
+```unix
 
 * Maybe most importantly, there are a couple of options built in to help you 
   with commands. If you know the one you want to use, you can type in 
@@ -39,7 +39,7 @@ I wont cover all options/flags of commands/programs here, but know that those ar
 Environment variables can be accessed by prefixing them with a $. Some common 
 ones are $SHELL, $USER, $OSTYPE, $PATH, $HOSTNAME, $HISTFILE. 
 
-```bash
+```unix 
 echo foo # Display line of text following echo command (here foo). 
 echo $SHELL # Display the path to the current shell. 
 echo $USER # Display the current user. 
@@ -73,7 +73,7 @@ history # Displays a history of the commands/programs you have run at the
 Note here that ^h is the same as ctrl-h on a mac, and the equivalent
 on a windows system. 
 
-```bash
+```unix 
 ^u # Erases input from current location to beginning of line
 ^k # Erases input from the current locaiton to the end of the line. 
 ^s # Pauses output from a program thats writing to screen. 
@@ -92,7 +92,7 @@ always start with a / and begin from the root directory, and relative paths,
 which do not begin with a / and start from the current working directory. cd 
 is the command that we use to nagivate from one directory to another. 
 
-```bash
+```unix
 pwd # Display the absolute path of the current working directory. 
 
 cd # Navigate to home directory. 
@@ -120,7 +120,7 @@ ls -l # List all files and subdirectories (excluding hidden) with additional
 
 #### Looking Inside Files 
 
-```bash 
+```unix 
 less # Allows you to read a long file on screen; typically displays 
      # one page at a time. 
 more # Seems at this point to be almost the exact same as the less command.
@@ -142,7 +142,7 @@ head -30 file1.txt # Display the first 30 lines of file1.txt.
 
 #### Changing permissions
 
-```bash 
+```unix 
 
 The program/command to change permissions is chmod. It has three parts: 
 
@@ -177,7 +177,7 @@ chgrp me myfolder # Set the group owner of myfolder to group me.
 
 #### Managing Files 
 
-```bash
+```unix
 
 mkdir is the program/command for creating directories, cp for copying 
 files/directories, mv for moving/renaming files or directories, rm 
@@ -210,14 +210,14 @@ rmdir spam # Delete spam directory - only works if this is empty (otherwise
 
 ## I/O and Redirection. 
 
-```bash 
+```unix 
 There are three default I/O streams: standard input, standard output, and 
 standard error. Unless you have changed it, programs will read standard 
 input from the keyboard and send standard output and standard error to 
 the terminal display.
 ```
 
-```bash
+```unix 
 
 1.) Adding ' > filename' to the end of a command line will divert the 
     program's output from the standard output to the named file. 
