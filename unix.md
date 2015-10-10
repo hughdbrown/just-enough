@@ -244,10 +244,10 @@ the terminal display.
 
 4.) Piping output (denoted by the | character) is the process of connecting 
     two programs such that the output from one program becomes the input of 
-    the next. Two programs connected in this way form a *pipe*. 
+    the next. Two programs connected in this way form a pipe. 
 
-    The standard output to the command to the left of the pipe becomes the standard
-    input of the command to the right of the pipe symbol. 
+    The standard output to the command to the left of the pipe symbol becomes 
+    the standard input of the command to the right of the pipe symbol. 
 
     ls -l | grep "Aug"
 
