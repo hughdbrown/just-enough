@@ -19,16 +19,16 @@ an entire repo.
 #### Setting your username and email. 
 
 ```bash
-git config --global user.name 'Monty Python' # Set username for your OS. 
-git config --global user.email mpython@gmail.com # Set email for your OS. 
+git config --global user.name 'Monty Python' # Set git username for your OS. 
+git config --global user.email mpython@gmail.com # Set git email for your OS. 
 
-git config --global user.name 'Monty Python' # Set username for the individual 
-											 # git repository you are in. 
-git config --global user.email mpython@gmail.com # Set email for the individual 
-												 # git repository you are in.
+git config user.name 'Monty Python' # Set git username for the individual 
+									# git repository you are in. 
+git config user.email mpython@gmail.com # Set git email for the individual 
+										# git repository you are in.
 
-git config --get user.name # View username. 
-git config --get user.email # View email. 
+git config --get user.name # View git username. 
+git config --get user.email # View git email. 
 ```
 
 #### Initializing a Git repository. 
@@ -52,7 +52,7 @@ git init # Initialize the current working directory to be a git repository.
 The standard workflow within a git repository is that you will change 
 one or more files in that repository, possibly review the changes, 
 add them to the _index_ (a file that git uses to keep track 
-of files), and then create a new commit with those changes.  
+of tracked files), and then create a new commit with those changes.  
 
 
 ```bash
@@ -61,9 +61,9 @@ git status # Will give you the status of your repository (i.e. what
 
 git add spam_recipe.txt # Add file spam_recipe.txt to the index staging area. 
 git add eggs/ # Add folder eggs to the index staging area. 
-git add . # Add files/directories to the index staging area.
-git add --all # Add the files/directories to the index staging area. 
-git add -A # Add the files/directories to the index staging area. 
+git add . # Add all files/directories to the index staging area.
+git add --all # Add all files/directories to the index staging area. 
+git add -A # Add all files/directories to the index staging area. 
 
 git commit -m 'I committed!' # Commit all files in the index staging area
 							 # with the commit message 'I committed!' Note
@@ -155,7 +155,7 @@ git push -u origin master # Same as the above; also only needs to be used the fi
 
 While useful to know how to create a local repository, add a remote, and learn 
 to push to it, often times we will just be downloading an existing repository
-to use as your local. The process of creating a new local repository from an 
+to use on your local. The process of creating a new local repository from an 
 existing remote repository is known as _cloning_ a repository. 
 
 ```bash
@@ -179,7 +179,7 @@ Let's say that there are some commits stored in the remote repository that you w
 like to get onto your local machine. There are two options to do this... 
 
 ```bash 
-git pull # This will pull any new commits from the remote into the local, and merge those
+git pull # This will pull any new commits from the remote into the local, AND merge those
 		 # commits into your local repository. 
 
 git fetch # This will fetch any new commits from the remote, but NOT merge them into your 
@@ -201,7 +201,7 @@ making new commits for a new feature that isn't ready for public consumption.
 If you are done with a branch and want to bring all the changes made on it into another
 branch, then we need to use a git _merge_. This has the possibility of introducing 
 _merge conflicts_, which occur when both branches involved in the merge have altered
-the same parts of the file. To resolve these, you'll have to go through the files git 
+the same parts of the same file. To resolve these, you'll have to go through the files git 
 tells you have conflicts, and choose which lines from the appropriate branch you want 
 to keep. 
 
@@ -217,4 +217,9 @@ git push --set-upstream origin second-branch # This assumes that you have checke
 
 git merge second-branch # This assumes that you have checked out the master branch, and then merges
 						# the branch named second-branch into it. 
+
+git push --delete origin hello # This assumes you have checked out master. It will push any changes 
+							   # that have not been pushed and will delete the remote branch hello. 
+git branch --delete hello # Deletes local branch hello. Note that if you have not deleted the remote
+						  # branch equivalent first, git may complain about unmerged or unpushed changes.  
 ```
