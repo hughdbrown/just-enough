@@ -134,21 +134,23 @@ homepage for that remote repository, you should be able to use the url
 for that repo to add it as a remote. 
 
 ```bash
-git remote add origin https://github.com/sallamander/just-enough.git # Add the just-enough.git repository 
-																	 # at https://github.com/sallamander
+git remote add origin https://github.com/sallamander/just-enough.git # Add the just-enough.git 
+																	 # repository at 
+																	 # https://github.com/sallamander
 																	 # as a remote repository for our
-																	 # current git repository (assuming 
-																	 # were in one). 
+																	 # current git repository 
+																	 # (assuming were in one). 
 
 git remote --verbose # Display the fetch and push urls that git uses to fetch remote commits and 
 					 # send new local commits. 
 
-git push --set-upstream origin master # Push any changes from the local repository to the origin remote
-									   # (here the one weve set up on github). Note that you only need 
-									   # the --set-upstream origin master the first time you push to it. 
-									   # From then on out you can just use git push. 
-git push -u origin master # Same as the above; also only needs to be used the first time you push to the 
-						  # origin remote after adding it as a remote. 
+git push --set-upstream origin master # Push any changes from the local repository to the origin 
+									  # remote (here the one weve set up on github). Note that 
+									  # you only need the --set-upstream origin master the 
+									  # first time you push to it. From then on out you can 
+									  # just use git push. 
+git push -u origin master # Same as the above; also only needs to be used the first time you push
+						  # to the origin remote after adding it as a remote. 
 ```
 
 #### Cloning a remote/Github repository onto your local. 
@@ -212,8 +214,8 @@ git checkout second-branch # Checkout the second-branch. This will checkout the 
 git push --set-upstream origin second-branch # This assumes that you have checked out the 
 											 # second branch, and then pushes any changes from 
 											 # that branch up to a remote branch named second-branch. 
-											 # If that remote branch is not created it will first create
-											 # it. 
+											 # If that remote branch is not created it will first 
+											 # create it. 
 
 git merge second-branch # This assumes that you have checked out the master branch, and then merges
 						# the branch named second-branch into it. 
@@ -221,5 +223,6 @@ git merge second-branch # This assumes that you have checked out the master bran
 git push --delete origin hello # This assumes you have checked out master. It will push any changes 
 							   # that have not been pushed and will delete the remote branch hello. 
 git branch --delete hello # Deletes local branch hello. Note that if you have not deleted the remote
-						  # branch equivalent first, git may complain about unmerged or unpushed changes.  
+						  # branch equivalent first, git may complain about unmerged or unpushed 
+						  # changes.  
 ```
