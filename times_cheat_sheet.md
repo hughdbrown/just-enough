@@ -39,9 +39,9 @@ When I work with time objects, the general workflow I follow is:
  
  Let's assume that I want to get this to a Python `datetime.datetime` object. This happens to be one of the Python date classes that I find most intuitive, easiest to work with, and the one I'm most familiar with (this is stricly my opinion, though - there might very well be better date classes to work with). 
 
-3. **Convert the time data to the format determined in `2`**: 
+3. **Convert the time data to the format determined in `2`:**
 
- * `datetime.datetime.fromtimestap` takes an `epoch` time, and returns the **local** time corresponding to that `epoch` time (e.g. it reads that `epoch` time as if it corresponded to the **local** time that your computer is set to) 
+ * `datetime.datetime.fromtimestap()` takes an `epoch` time, and returns the **local** time corresponding to that `epoch` time (e.g. it reads that `epoch` time as if it corresponded to the **local** time that your computer is set to) 
     * If we have an epoch time of `1464014493` (the one from above), we can convert it by typing: 
     
      ```
@@ -50,6 +50,49 @@ When I work with time objects, the general workflow I follow is:
      ```
 
      This will return `datetime.datetime(2016, 5, 23, 9, 41, 33)`, which corresponds to `2015-05-23 9:41:33`. Notice that this is 5 hours behind what we got back from the [epoch time calculator](http://www.epochconverter.com/), which corresponds to the fact that Austin (where I am current at) is 5 hours behind the `GMT` timezone. 
+
+4. **Perform any calculations that I need to do**
+
+I'm going to punt on this until we walk through the three ways we might obtain time data. Once we get it in the format we want, then working with it any performing calculations will all use roughly the same code. 
+
+### Time data stored as a `string`
+
+1. **Figure out how the data is stored**: 
+
+ In this case, the dates will look like strings (e.g. '2015-05-29', or something like that). Sometimes, date classes will display as strings, so in this case I usually double check the type using the `type()` function in Python.
+
+2. **Figure out what format I need to get the data in**: 
+
+ Let's assume that I want to get this to a Python `datetime.datetime` object. This happens to be one of the Python date classes that I find most intuitive, easiest to work with, and the one I'm most familiar with (this is strictly my opinion, though - there might very well be better date classes to work with). 
+
+ This time, though, we'll assume that want to put the string into a specific time zone (let's use Eastern Standard), and work through that.  
+
+3. **Convert the time data to the format determined in `2`:**
+ 
+ * `datetime.datetime.strptime()` takes a string (`str` in Python) along with a **format** that the string follows, and returns a `datetime.datetime` object. The **format** will tell Python what parts of the string correspond to what parts of the date (`%Y` for year, `%d` for day, etc.). The trickiest part of getting a `str` to a `datetime.datetime` object is figuring out what format to use. Typically, I play around with formatting specifications from [the docs](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior) until I get the intended result.  
+ * If we wanted to take the date we had above from it's string format ('2016-05-23 09:41:33'), we can convert it by typing: 
+
+    ```
+    from datetime import datetime
+    datetime.strptime('2016-05-23 09:41:33', '%Y-%m-%d %H:%M:%S')
+    ```
+
+    This will return `datetime.datetime(2016, 5, 23, 9, 41, 33)`, which corresponds to `2015-05-23 9:41:33`. Notice that this is 5 hours behind what we got back from the [epoch time calculator](http://www.epochconverter.com/), which corresponds to the fact that Austin (where I am current at) is 5 hours behind the `GMT` timezone. I said that I wanted this to be in Eastern Standard time, though, so let's change that. 
+    
+    To do that, we're going to work with the `pytz` module (so, you'll have to `pip` or `conda` install it first). With this module, we'll specify a starting and ending timezone, and then simply convert our date object from the starting timezone to the ending timezone. 
+
+    ```
+    import pytz
+    from datetime import datetime
+    start_ts = datetime.strptime('2016-05-23 09:41:33', '%Y-%m-%d %H:%M:%S')
+    
+    start_tz = pytz.timezone('US/Central')
+    end_tz = pytz.timezone('US/Eastern')
+    end_ts = start_tz.localize(start_ts).astimezone(end_tz)
+    ```
+
+    The `end_ts` will then hold the time corresponding to `2016-05-23 10:41:33`, which is one hour later than we started (which corresponds to the timezone difference between `Central` in Austin and `Eastern`). For a list of available timezones, you can check out this ![SO post](http://stackoverflow.com/questions/13866926/python-pytz-list-of-timezones).  
+
 
 4. **Perform any calculations that I need to do**
 
